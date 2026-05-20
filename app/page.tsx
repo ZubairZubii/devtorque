@@ -28,6 +28,11 @@ import { FadeInSection, StaggerContainer, StaggerItem } from "@/components/ui/pa
 import { EarthGlobe } from "@/components/earth-globe"
 import { TechOrbitCSS } from "@/components/tech-orbit-css"
 import { WaveText } from "@/components/wave-text"
+import { TextScramble } from "@/components/text-scramble"
+import { TypewriterCycle } from "@/components/typewriter"
+import { TestimonialsSection } from "@/components/testimonials-section"
+import { HowWeWork } from "@/components/how-we-work"
+import { Magnetic } from "@/components/magnetic"
 
 function AnimatedCounter({ value, duration = 1.8 }: { value: number; duration?: number }) {
   const [count, setCount] = useState(0)
@@ -188,14 +193,17 @@ export default function Home() {
                 transition={{ duration: 0.65, delay: 0.1 }}
                 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] md:leading-[0.95] mb-6 tracking-tight"
               >
-                <WaveText as="span" className="block text-white">We Build</WaveText>
-                <WaveText
-                  as="span"
+                <span className="block text-white">
+                  <TextScramble text="We Build" delay={300} speed={28} />
+                </span>
+                <span
                   className="block bg-gradient-to-r from-[#4d9fff] to-[#38bdf8] bg-clip-text text-transparent"
                 >
-                  AI Systems
-                </WaveText>
-                <WaveText as="span" className="block text-white/70">That Scale</WaveText>
+                  <TextScramble text="AI Systems" delay={600} speed={22} />
+                </span>
+                <span className="block text-white/70">
+                  <TextScramble text="That Scale" delay={950} speed={28} />
+                </span>
               </motion.h1>
 
               <motion.p
@@ -204,9 +212,13 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.22 }}
                 className="text-base text-white/50 mb-8 leading-relaxed max-w-md"
               >
-                Your team is drowning in manual tasks, missed follow-ups, and
-                broken workflows. We fix that — permanently — with AI systems
-                that run your operations 24/7.
+                Built for{" "}
+                <TypewriterCycle
+                  words={["E-Commerce brands", "Real Estate firms", "Marketing agencies", "SaaS companies", "Healthcare clinics", "Consulting firms"]}
+                  className="text-white/80 font-semibold"
+                  interval={2600}
+                />
+                {" "}— AI systems that run your operations 24/7 and permanently eliminate manual work.
               </motion.p>
 
               <motion.div
@@ -215,21 +227,16 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.32 }}
                 className="flex flex-wrap gap-3 mb-9"
               >
-                <Link href="/contact">
-                  <Button
-                    size="lg"
-                    className="btn-primary px-7 py-5 group"
-                  >
-                    Book Free Consultation
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
+                <Magnetic strength={0.3}>
+                  <Link href="/contact">
+                    <Button size="lg" className="btn-primary btn-shimmer px-7 py-5 group">
+                      Book Free Consultation
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </Magnetic>
                 <Link href="/services">
-                  <Button
-                    size="lg"
-                    variant="ghost"
-                    className="btn-ghost px-7 py-5"
-                  >
+                  <Button size="lg" variant="ghost" className="btn-ghost px-7 py-5">
                     Explore Services
                   </Button>
                 </Link>
@@ -491,6 +498,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── HOW WE WORK ──────────────────────────────────────────── */}
+      <HowWeWork />
+
+      {/* ── TESTIMONIALS ─────────────────────────────────────────── */}
+      <TestimonialsSection />
 
       {/* ── INDUSTRIES WE SERVE ──────────────────────────────────── */}
       <section className="py-12 bg-[#060810] border-b border-white/6 relative overflow-hidden">

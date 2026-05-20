@@ -690,3 +690,9 @@ select:focus {
 .animate-flow-dash-reverse {
   animation: flow-dash-reverse 0.8s linear infinite;
 }
+
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
