@@ -23,7 +23,7 @@ const footerLinks = {
   social: [
     { label: "Instagram", href: "https://www.instagram.com/software.projects.dev/?hl=it", icon: Instagram },
     { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61577817483423", icon: Facebook },
-    { label: "LinkedIn", href: "#", icon: Linkedin },
+    { label: "LinkedIn", href: "https://pk.linkedin.com/company/devtorque", icon: Linkedin },
   ],
 }
 
