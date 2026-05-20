@@ -173,8 +173,8 @@ export default function Footer() {
               <span className="text-[10px] text-white/30 uppercase tracking-widest">Systems Online</span>
             </div>
             <div className="flex gap-5">
-              <a href="tel:+923244983581" className="text-xs text-white/30 hover:text-white/70 transition-colors flex items-center gap-1.5">
-                <Phone size={10} /> +92 324 498 3581
+              <a href="tel:+923244983583" className="text-xs text-white/30 hover:text-white/70 transition-colors flex items-center gap-1.5">
+                <Phone size={10} /> +92 324 498 3583
               </a>
               <a href="mailto:devtorque.ai@gmail.com" className="text-xs text-white/30 hover:text-white/70 transition-colors flex items-center gap-1.5">
                 <Mail size={10} /> devtorque.ai@gmail.com
