@@ -16,7 +16,9 @@ const footerLinks = {
   ],
   company: [
     { label: "About Us", href: "/about" },
+    { label: "Case Studies", href: "/case-studies" },
     { label: "Contact", href: "/contact" },
+    { label: "Privacy & Terms", href: "/privacy" },
   ],
   social: [
     { label: "Instagram", href: "https://www.instagram.com/software.projects.dev/?hl=it", icon: Instagram },

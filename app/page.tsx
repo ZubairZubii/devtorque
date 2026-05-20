@@ -33,6 +33,7 @@ import { TypewriterCycle } from "@/components/typewriter"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { HowWeWork } from "@/components/how-we-work"
 import { Magnetic } from "@/components/magnetic"
+import { PainSolution } from "@/components/pain-solution"
 
 function AnimatedCounter({ value, duration = 1.8 }: { value: number; duration?: number }) {
   const [count, setCount] = useState(0)
@@ -142,7 +143,7 @@ export default function Home() {
     <div className="relative">
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
         {/* Multi-layer background */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_65%_55%_at_65%_45%,rgba(0,55,160,0.20),transparent_72%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_35%_30%_at_18%_65%,rgba(70,35,160,0.09),transparent_60%)]" />
@@ -334,7 +335,7 @@ export default function Home() {
       </section>
 
       {/* ── SERVICES ─────────────────────────────────────────────── */}
-      <section className="py-28 relative">
+      <section id="services" className="py-28 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_35%_at_50%_0%,rgba(0,45,130,0.10),transparent)]" />
         <div className="container mx-auto px-6 relative">
           <FadeInSection>
@@ -499,11 +500,14 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── PAIN → SOLUTION ──────────────────────────────────────── */}
+      <PainSolution />
+
       {/* ── HOW WE WORK ──────────────────────────────────────────── */}
-      <HowWeWork />
+      <div id="how-we-work"><HowWeWork /></div>
 
       {/* ── TESTIMONIALS ─────────────────────────────────────────── */}
-      <TestimonialsSection />
+      <div id="testimonials"><TestimonialsSection /></div>
 
       {/* ── INDUSTRIES WE SERVE ──────────────────────────────────── */}
       <section className="py-12 bg-[#060810] border-b border-white/6 relative overflow-hidden">
@@ -551,7 +555,7 @@ export default function Home() {
       </section>
 
       {/* ── TECH ORBIT ───────────────────────────────────────────── */}
-      <section className="py-28 relative overflow-hidden bg-[#06080f]">
+      <section id="tech-orbit" className="py-28 relative overflow-hidden bg-[#06080f]">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_50%,rgba(80,40,180,0.07),transparent)]" />
         <div className="container mx-auto px-6 relative">
           <FadeInSection>
@@ -593,10 +597,10 @@ export default function Home() {
       </section>
 
       {/* ── ROI CALCULATOR ───────────────────────────────────────── */}
-      <ROICalculator />
+      <div id="roi"><ROICalculator /></div>
 
       {/* ── CTA ──────────────────────────────────────────────────── */}
-      <section className="py-24 relative overflow-hidden">
+      <section id="cta" className="py-24 relative overflow-hidden">
         <div className="container mx-auto px-6 relative">
           <FadeInSection>
             <div className="max-w-4xl mx-auto rounded-3xl p-10 md:p-14 bg-gradient-to-br from-[#0c1228] to-[#070913] text-white shadow-[0_20px_50px_rgba(0,102,255,0.08),0_0_0_1px_rgba(77,159,255,0.12)] relative overflow-hidden">

@@ -11,6 +11,7 @@ import { Magnetic } from "@/components/magnetic"
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
+  { href: "/case-studies", label: "Work" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ]
@@ -42,9 +43,13 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
-            <div className="relative w-8 h-8 rounded-lg overflow-hidden border border-white/12 group-hover:border-[#38bdf8]/40 transition-colors">
+            <motion.div
+              whileHover={{ rotate: [0, -8, 8, -4, 0], scale: 1.08 }}
+              transition={{ duration: 0.45 }}
+              className="relative w-8 h-8 rounded-lg overflow-hidden border border-white/12 group-hover:border-[#38bdf8]/40 group-hover:shadow-[0_0_12px_rgba(56,189,248,0.25)] transition-all"
+            >
               <Image src="/images/devtorque-logo.jpg" alt="DevTorque" fill className="object-cover" />
-            </div>
+            </motion.div>
             <span className="text-base font-bold tracking-tight text-white group-hover:text-[#38bdf8] transition-colors">
               DevTorque
             </span>
